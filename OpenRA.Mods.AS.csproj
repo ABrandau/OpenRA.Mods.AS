@@ -69,22 +69,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Activities\FallDown.cs" />
-    <Compile Include="Duplicates\Projectiles\MissileAS.cs" />
+    <Compile Include="Activities\HeliFlyCircleTimed.cs" />
     <Compile Include="Duplicates\Traits\EjectOnDeathAS.cs" />
     <Compile Include="Duplicates\Traits\Render\WithIdleOverlayAS.cs" />
     <Compile Include="Duplicates\Traits\Sound\AnnounceOnBuildAS.cs" />
     <Compile Include="Duplicates\Traits\Sound\AnnounceOnKillAS.cs" />
+    <Compile Include="Effects\AirstrikePowerASEffect.cs" />
     <Compile Include="Lint\CheckSpawnActorWarheads.cs" />
     <Compile Include="Lint\CheckTargetHealthRadiusAS.cs" />
     <Compile Include="Projectiles\AthenaProjectile.cs" />
     <Compile Include="Projectiles\InstantExplode.cs" />
+    <Compile Include="Traits\Conditions\GrantConditionAboveAltitude.cs" />
     <Compile Include="Traits\Crate\GiveRandomActorCrateAction.cs" />
-    <Compile Include="Traits\DeployToTimedUpgrade.cs" />
     <Compile Include="Traits\EligibleForRandomActorCrate.cs" />
     <Compile Include="Traits\ExplodeWeapon.cs" />
+    <Compile Include="Traits\PeriodicProducer.cs" />
     <Compile Include="Traits\Player\PlayerSilo.cs" />
-    <Compile Include="Traits\TransformOnUpgrade.cs" />
-    <Compile Include="Traits\UpgradeCrusher.cs" />
+    <Compile Include="Traits\RevealOnFire.cs" />
+    <Compile Include="Traits\SupportPowers\AirstrikePowerAS.cs" />
     <Compile Include="Traits\Multipliers\HealthPercentageFirepowerMultiplier.cs" />
     <Compile Include="Traits\SupportPowers\DetonateWeaponPower.cs" />
     <Compile Include="Traits\SupportPowers\FireArmamentPower.cs" />
@@ -101,12 +103,15 @@
     <Compile Include="Traits\World\WeaponStorm.cs" />
     <Compile Include="UtilityCommands\ImportASMapCommand.cs" />
     <Compile Include="Traits\Warheads\PromotionWarhead.cs" />
-    <Compile Include="Traits\GrantPeriodicUpgrades.cs" />
     <Compile Include="Traits\Render\WithVoxelHelicopterBody.cs" />
     <Compile Include="Traits\SmokeParticleEmitter.cs" />
     <Compile Include="Effects\SmokeParticle.cs" />
-    <Compile Include="Traits\HordeBonus.cs" />
-    <Compile Include="Traits\GrantHordeBonus.cs" />
+    <Compile Include="Traits\Conditions\GrantTimedConditionOnDeploy.cs" />
+    <Compile Include="Traits\Conditions\GrantPeriodicCondition.cs" />
+    <Compile Include="Traits\Conditions\TransformOnCondition.cs" />
+    <Compile Include="Traits\Conditions\GrantExternalConditionToCrusher.cs" />
+    <Compile Include="Traits\Conditions\HordeBonus.cs" />
+    <Compile Include="Traits\Conditions\GrantHordeBonus.cs" />
   </ItemGroup>
   <ItemGroup />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
@@ -121,4 +126,5 @@
 copy "$(TargetPath)" "$(SolutionDir)mods/as/"
 cd "$(SolutionDir)"</PostBuildEvent>
   </PropertyGroup>
+  <ItemGroup />
 </Project>
